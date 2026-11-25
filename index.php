@@ -6,12 +6,12 @@
 	<title>Document</title>
 </head>
 <body>
-    <header>
-        
-    </header>
-
+    <?php include "layout/header.html"?>
+    
     <main>
-        
+        <p>Halo Selamat datang di website kami</p>
     </main>	
+
+    <?php include "layout/footer.html"?>
 </body>
 </html>
