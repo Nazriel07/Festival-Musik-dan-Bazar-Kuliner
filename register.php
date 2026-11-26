@@ -1,5 +1,7 @@
 <?php
     include "service/database.php";
+
+    $register_message = "";
     
     if(isset($_POST['register'])){
         $username = $_POST["username"];
@@ -9,9 +11,9 @@
         ('$username', '$password')";
 
         if($DB->query($sql)){
-            echo "OK MANTAP DATA MASUK";
+            $register_message = "daftar akun berhasil, silahkan login";
         }else{
-            echo "DATA GAGAL MASUK";
+            $register_message = "daftar akun gagal, silahkan cocba lagi";
         }
         
     }

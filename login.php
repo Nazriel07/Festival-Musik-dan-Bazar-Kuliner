@@ -12,7 +12,10 @@
         $result = $DB->query($sql);
 
         if($result->num_rows > 0){
-            echo "DATANYA ADA";
+            $data = $result->fetch_assoc();
+
+            header("location: dashboard.php");
+            
         }else{
             echo "AKUN TIDAK DITEMUKAN";
         }
